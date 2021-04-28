@@ -1,8 +1,8 @@
 #include <iostream>
-
-using namespace std;
+#include "bar.h"
 
 void main() 
 {
 	std::cout << "Hello world!";
+	foo(10);
 }
