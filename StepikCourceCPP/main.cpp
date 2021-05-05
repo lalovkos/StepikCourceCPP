@@ -7,9 +7,7 @@ int power(int x, unsigned p) {
     
     if (p) {
         answer = x;
-        for (int i = 0; i < p-1; i++) {
-            answer = answer * x;
-        }
+        answer = (p & 1) ? x * power(x, p & ~1) : power(x * x, p >> 1);
     }
 
     return answer;
