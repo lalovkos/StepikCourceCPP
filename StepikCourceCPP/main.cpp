@@ -3,12 +3,9 @@
 #include "algorithm"
 
 int power(int x, unsigned p) {
-    int answer;
+    int answer = 1;
     
-    if (p == 0) {
-        return 1;
-    }
-    else {
+    if (p) {
         answer = x;
         for (int i = 0; i < p-1; i++) {
             answer = answer * x;
