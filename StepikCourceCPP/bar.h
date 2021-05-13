@@ -1,7 +1,13 @@
 #ifndef BAR_EXT
 #define BAR_EXT
-	void foo(int a);
-#endif
+namespace BarNamespace
+{
+    struct ROOTS {
+        double root1, root2;
+        bool Exist;
+    };
 
-//можно использовать #pragma once но это менее переносимо и не поддерживается старыми компиляторами, 
-//однако быстрее, потому что файл не предзагружается и не предсчитывается 
+    ROOTS FindRoots(int a, int b, int c);
+
+}
+#endif 

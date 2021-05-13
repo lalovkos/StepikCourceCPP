@@ -1,16 +1,21 @@
 #include <iostream>
 
+#include "bar.h"
+
 using namespace std;
 
 int main()
 {
-    int p;
-    std::cin >> p;
-    for (int i = 0; i < p; i++)
-    {
-        int x, y;
-        std::cin >> x >> y;
-        std::cout << x + y << std::endl;
+    int a, b, c;
+    std::cin >> a >> b >> c;
+
+    BarNamespace::ROOTS roots = BarNamespace::FindRoots(a, b, c);
+
+    if (roots.Exist) {
+        std::cout << roots.root1 << " " << roots.root2 << std::endl;
+    }
+    else {
+        std::cout << "No real roots" << std::endl;
     }
 
     return 0;

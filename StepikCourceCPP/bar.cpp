@@ -1,14 +1,26 @@
-extern int a;
-//»нициализируем переменную без выделени€ пам€ти
 
+#include <math.h>
 
-void foo(int a) {
-	a = a + 1;
+#include "bar.h"
+
+namespace BarNamespace
+{
+    ROOTS FindRoots(int a, int b, int c) {
+        ROOTS answer;
+        //ѕрограмма проста€, с вещественными работать будет плохо, 
+        if ((b * b - 4 * a * c) >= 0) //≈сли дискриминант больше или равен 0
+        {
+            double temp = sqrt(b * b - 4 * a * c);
+            answer.root1 = (-1 * b + temp) / (2 * a);
+            answer.root2 = (-1 * b - temp) / (2 * a);
+            answer.Exist = true;
+        }
+        else
+        {
+            answer.root1 = 0;
+            answer.root2 = 0;
+            answer.Exist = false;
+        }
+        return answer;
+    }
 }
-
-////char c = '\0';
-////while (cin.get(c)) { // на каждой итерации считываем один символ в переменную c
-////	/* здесь можно пользоватьс€ значением прочитанным в переменную c */
-////	if (c != 'a')
-////		cout << c; // выводим символ, если он не равен 'a'
-////}
