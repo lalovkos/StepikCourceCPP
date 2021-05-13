@@ -4,21 +4,25 @@
 
 using namespace std;
 
+int log(int k) {
+    int p = -1;
+    do {
+        k >>= 1;
+        p++;
+    } while (k);
+    return p;
+}
+
 int main()
 {
-    
-    char c = '\0';
-    bool FirstEnter = true;
-    while (std::cin.get(c)) {
-        
-        if ( (c != ' ') ) {
-            std::cout << c;
-            FirstEnter = true;
-        }
-        else if (FirstEnter) {
-            std::cout << c;
-            FirstEnter = false;
-        }
+    int n;
+    std::cin >> n;
+
+    while (n--) {
+        int k;
+        std::cin >> k;
+
+        std::cout << log(k) << std::endl;
     }
 
     return 0;
