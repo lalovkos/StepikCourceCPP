@@ -1,22 +1,17 @@
 #include <iostream>
-#include "bar.h"
-#include "algorithm"
 
-int power(int x, unsigned p) {
-    int answer = 1;
-    
-    if (p) {
-        answer = x;
-        answer = (p & 1) ? x * power(x, p & ~1) : power(x * x, p >> 1);
+using namespace std;
+
+int main()
+{
+    int p;
+    std::cin >> p;
+    for (int i = 0; i < p; i++)
+    {
+        int x, y;
+        std::cin >> x >> y;
+        std::cout << x + y << std::endl;
     }
 
-    return answer;
-}
-
-int main() {
-    int x = 1;
-    unsigned p = 10;
-    std::cin >> x >> p;
-    std::cout << power(x, p) << std::endl;
-	return 0;
+    return 0;
 }
