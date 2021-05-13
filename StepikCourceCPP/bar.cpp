@@ -1,6 +1,4 @@
 
-#include <math.h>
-
 #include "bar.h"
 
 namespace BarNamespace
@@ -23,4 +21,5 @@ namespace BarNamespace
         }
         return answer;
     }
+
 }

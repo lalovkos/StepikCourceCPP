@@ -1,5 +1,10 @@
 #ifndef BAR_EXT
 #define BAR_EXT
+
+#include <math.h>
+#include <string>
+#include <iostream>
+
 namespace BarNamespace
 {
     struct ROOTS {
@@ -8,6 +13,5 @@ namespace BarNamespace
     };
 
     ROOTS FindRoots(int a, int b, int c);
-
 }
 #endif 

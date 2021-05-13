@@ -6,16 +6,19 @@ using namespace std;
 
 int main()
 {
-    int a, b, c;
-    std::cin >> a >> b >> c;
-
-    BarNamespace::ROOTS roots = BarNamespace::FindRoots(a, b, c);
-
-    if (roots.Exist) {
-        std::cout << roots.root1 << " " << roots.root2 << std::endl;
-    }
-    else {
-        std::cout << "No real roots" << std::endl;
+    
+    char c = '\0';
+    bool FirstEnter = true;
+    while (std::cin.get(c)) {
+        
+        if ( (c != ' ') ) {
+            std::cout << c;
+            FirstEnter = true;
+        }
+        else if (FirstEnter) {
+            std::cout << c;
+            FirstEnter = false;
+        }
     }
 
     return 0;
