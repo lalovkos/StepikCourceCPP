@@ -2,7 +2,6 @@
 
 #include "bar.h"
 
-using namespace std;
 
 int log(int k) {
     int p = -1;
@@ -13,17 +12,27 @@ int log(int k) {
     return p;
 }
 
-int main()
-{
-    int n;
-    std::cin >> n;
+unsigned gcd(unsigned a, unsigned b) {
 
-    while (n--) {
-        int k;
-        std::cin >> k;
-
-        std::cout << log(k) << std::endl;
+    unsigned ostatok;
+    ostatok = (a > b)?(a % b):(b % a);
+    if (ostatok == 0) {
+        return (a > b)?b:a;
+    }
+    else {
+        return (a > b)?gcd(ostatok, b):gcd(a, ostatok);
     }
 
-    return 0;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+
+    int i = 10;
+
+    x = ((i = x*i) * (i));
+    
+
+    return x;
 }
