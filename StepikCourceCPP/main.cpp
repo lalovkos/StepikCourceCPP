@@ -15,24 +15,30 @@ int log(int k) {
 unsigned gcd(unsigned a, unsigned b) {
 
     unsigned ostatok;
-    ostatok = (a > b)?(a % b):(b % a);
+    ostatok = (a > b) ? (a % b) : (b % a);
     if (ostatok == 0) {
-        return (a > b)?b:a;
+        return (a > b) ? b : a;
     }
     else {
-        return (a > b)?gcd(ostatok, b):gcd(a, ostatok);
+        return (a > b) ? gcd(ostatok, b) : gcd(a, ostatok);
     }
 
 }
 
-int main() {
-    int x = 10;
-    int y = 20;
-
-    int i = 10;
-
-    x = ((i = x*i) * (i));
+void WriteInConsoleFromLast() {
     
+    int new_c;
+    std::cin >> new_c;
+    if (new_c != 0) {
+        WriteInConsoleFromLast();
+        std::cout << new_c << ' ';
+    }
+   
+}
 
-    return x;
+int main() {
+   
+    WriteInConsoleFromLast();
+
+    return 0;
 }
