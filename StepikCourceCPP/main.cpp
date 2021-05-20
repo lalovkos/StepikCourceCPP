@@ -54,15 +54,18 @@ void rotate(int a[], unsigned size, int shift) {
     
 }
 
-int main() {
-
-    int a[] = {1,2,3,4,5,6,7,8,9};
-    rotate(a,9,4);
-    for (int i = 0; i < 9; i++) {
-
-        std::cout << a[i];
-    
+unsigned strlen(const char* str)
+{
+    unsigned len = 0;
+    while (*str++) {
+        ++len;
     }
+    return len;
+}
+
+int main() {
+    char str[] = "sdasda";
+    std::cout << strlen(str);
 
     return 0;
 }
