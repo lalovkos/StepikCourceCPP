@@ -93,6 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,10 +143,12 @@
   <ItemGroup>
     <ClCompile Include="bar.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TCPProject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bar.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="TCPProject.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="StepikCourceCPP.rc" />
